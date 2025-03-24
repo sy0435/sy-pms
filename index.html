@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+
+body {background-color:purple;}
+#wms {width:50%; min-width:640px; background-color:white;}
+input[type="radio"] {display:none;}
+
+.category {width:100%; box-sizing:border-box; border:1px solid; padding:5px 0; text-align:center; font-weight:bold;}
+.alwlq {background-color:yellow;}
+.rlxk {background-color:yellow;}
+.rhkwlq {background-color:orange;}
+.tlfvo {background-color:orange;}
+.dhwlq {background-color:palevioletred;}
+.vkths {background-color:dodgerblue;}
+.alrjawmd {background-color:darkgray;}
+.cnlth {background-color:yellowgreen;}
+
+.alwlqC {width:100%; height:100px;}
+.rlxkC {width:100%; height:125px;}
+.rhkwlqC {width:100%; height:75px;}
+.tlfvoC {width:100%; height:125px;}
+.dhwlqC {width:100%; height:100px;}
+.vkthsC {width:100%; height:100px;}
+.alrjawmdC {width:100%; height:50px;}
+.cnlthC {width:100%; height:50px;}
+
+.cmd0, .comment {box-sizing:border-box; border:1px solid; border-top:none;}
+.cmd0 {width:10%; height:100%; border-right:none; text-align:center; float:left;}
+.alrjawmd0, .cnlth0 {line-height:50px;}
+.rhkwlq0 {line-height:75px;}
+.alwlq0, .dhwlq0, .vkths0 {line-height:100px;}
+.rlxk0, .tlfvo0 {line-height:125px;}
+
+.comment {padding-left:10px; float:left;}
+.comment1 {width:90%; height:25px;}
+.comment2 {width:40%; height:25px;}
+.comment3 {width:50%; height:25px; border-left:none;}
+.comment4 {width:50%; height:31.25px; float:right; border-left:none;}
+.comment5 {width:40%; height:50px;}
+.comment6 {width:50%; height:100px; float:right;}
+
+.cmd0:active, .comment:active {background-color:#FF3232; color:white;}
+
+</style>
+
+<body>
+
+<div id="wms">
+
+<div class="category alwlq">미집</div>
+<div class="alwlqC">
+<input type="radio" name="comment" id="alwlq0" value="AGV/" onclick="copyValue(this)"/><label for="alwlq0" class="cmd0 alwlq0">층/</label>
+<input type="radio" name="comment" id="alwlq11" value="상품 미확인(전체 집품누락)/재집품/불용 로케이션 미사용" onclick="copyValue(this)"/><label for="alwlq11" class="comment comment1 alwlq11">상품 미확인(전체 집품누락)/재집품/불용 로케이션 미사용</label>
+<input type="radio" name="comment" id="alwlq21" value="수량 확인 미흡(일부만 집품)/재집품/불용 로케이션 미사용" onclick="copyValue(this)"/><label for="alwlq21" class="comment comment1 alwlq21">수량 확인 미흡(일부만 집품)/재집품/불용 로케이션 미사용</label>
+<input type="radio" name="comment" id="alwlq31" value="분실/XY 전환/" onclick="copyValue(this)"/><label for="alwlq31" class="comment comment1 alwlq31">분실/XY 전환/XY 인벤토리 ID</label>
+<input type="radio" name="comment" id="alwlq41" value="토트 오집 건" onclick="copyValue(this)"/><label for="alwlq41" class="comment comment1 alwlq41">토트 오집 건</label>
+</div>
+
+<br/>
+
+<div class="category rlxk">기타(과출고or오출고/교차)</div>
+<div class="rlxkC">
+<input type="radio" name="comment" id="rlxk0" value="AGV/" onclick="copyValue(this)"/><label for="rlxk0" class="cmd0 rlxk0">층/</label>
+<input type="radio" name="comment" id="rlxk11" value="과출고/XY전환/" onclick="copyValue(this)"/><label for="rlxk11" class="comment comment1 rlxk11">과출고/XY전환/XY 인벤토리 ID</label>
+<input type="radio" name="comment" id="rlxk21" value="과출고/상품발견(원복)/불용 로케이션 미사용" onclick="copyValue(this)"/><label for="rlxk21" class="comment comment1 rlxk21">과출고/상품발견(원복)/불용 로케이션 미사용</label>
+<input type="radio" name="comment" id="rlxk31" value="오출고/XY전환/" onclick="copyValue(this)"/><label for="rlxk31" class="comment comment1 rlxk31">오출고/XY전환/XY 인벤토리 ID</label>
+<input type="radio" name="comment" id="rlxk41" value="오출고/상품발견(원복)/불용 로케이션 미사용" onclick="copyValue(this)"/><label for="rlxk41" class="comment comment1 rlxk41">오출고/상품발견(원복)/불용 로케이션 미사용</label>
+<input type="radio" name="comment" id="rlxk51" value="해피콜/BTS 티켓 상신" onclick="copyValue(this)"/><label for="rlxk51" class="comment comment1 rlxk51">해피콜/BTS 티켓 상신</label>
+</div>
+
+<br/>
+
+<div class="category rhkwlq">과집</div>
+<div class="rhkwlqC">
+<input type="radio" name="comment" id="rhkwlq0" value="AGV/" onclick="copyValue(this)"/><label for="rhkwlq0" class="cmd0 rhkwlq0">층/</label>
+<input type="radio" name="comment" id="rhkwlq11" value="수량 확인 오류/" onclick="copyValue(this)"/><label for="rhkwlq11" class="comment comment2 rhkwlq11">수량 확인 오류/</label>
+<input type="radio" name="comment" id="rhkwlq12" value="과집상품 원복/불용 로케이션 미사용" onclick="copyValue(this)"/><label for="rhkwlq12" class="comment comment3 rhkwlq12">과집상품 원복/불용 로케이션 미사용</label>
+<input type="radio" name="comment" id="rhkwlq21" value="낱개상품 박스단위 집품/" onclick="copyValue(this)"/><label for="rhkwlq21" class="comment comment2 rhkwlq21">낱개상품 박스단위 집품/</label>
+<input type="radio" name="comment" id="rhkwlq22" value="XY 원복/" onclick="copyValue(this)"/><label for="rhkwlq22" class="comment comment3 rhkwlq22">XY 원복/XY 인벤토리 ID</label>
+<input type="radio" name="comment" id="rhkwlq31" value="자석 or 합포장 미분리/" onclick="copyValue(this)"/><label for="rhkwlq31" class="comment comment2 rhkwlq31">자석 or 합포장 미분리/</label>
+<input type="radio" name="comment" id="rhkwlq32" value="PRB 원복/" onclick="copyValue(this)"/><label for="rhkwlq32" class="comment comment3 rhkwlq32">PRB 원복/PRB 인벤토리 ID</label>
+</div>
+
+<br/>
+
+<div class="category tlfvo">출고검증실패(미출고, 교차)</div>
+<div class="tlfvoC">
+<input type="radio" name="comment" id="tlfvo0" value="AGV/" onclick="copyValue(this)"/><label for="tlfvo0" class="cmd0 tlfvo0">층/</label>
+<input type="radio" name="comment" id="tlfvo11" value="수량 확인 미흡(일부만 출고)/" onclick="copyValue(this)"/><label for="tlfvo11" class="comment comment2 tlfvo11">수량 확인 미흡(일부만 출고)/</label>
+<input type="radio" name="comment" id="tlfvo12" value="XY 원복/" onclick="copyValue(this)"/><label for="tlfvo12" class="comment comment4 tlfvo12">XY 원복/XY 인벤토리 ID</label>
+<input type="radio" name="comment" id="tlfvo21" value="상품 확인 미흡(전체 미출고)/" onclick="copyValue(this)"/><label for="tlfvo21" class="comment comment2 tlfvo21">상품 확인 미흡(전체 미출고)/</label>
+<input type="radio" name="comment" id="tlfvo22" value="PRB 원복/" onclick="copyValue(this)"/><label for="tlfvo22" class="comment comment4 tlfvo22">PRB 원복/PRB 인벤토리 ID</label>
+<input type="radio" name="comment" id="tlfvo31" value="교차출고/" onclick="copyValue(this)"/><label for="tlfvo31" class="comment comment2 tlfvo31">교차출고/</label>
+<input type="radio" name="comment" id="tlfvo32" value="가용화 인계/불용 로케이션 미사용" onclick="copyValue(this)"/><label for="tlfvo32" class="comment comment4 tlfvo32">가용화 인계/불용 로케이션 미사용</label>
+<input type="radio" name="comment" id="tlfvo41" value="송장분실/" onclick="copyValue(this)"/><label for="tlfvo41" class="comment comment2 tlfvo41">송장분실/</label>
+<input type="radio" name="comment" id="tlfvo42" value="미출고상품 원복/불용 로케이션 미사용" onclick="copyValue(this)"/><label for="tlfvo42" class="comment comment4 tlfvo42">미출고상품 원복/불용 로케이션 미사용</label>
+<input type="radio" name="comment" id="tlfvo51" value="설비 (컨베이어 등)/" onclick="copyValue(this)"/><label for="tlfvo51" class="comment comment2 tlfvo51">설비 (컨베이어 등)/</label>
+</div>
+
+<br/>
+
+<div class="category dhwlq">오집</div>
+<div class="dhwlqC">
+<input type="radio" name="comment" id="dhwlq0" value="AGV/" onclick="copyValue(this)"/><label for="dhwlq0" class="cmd0 dhwlq0">층/</label>
+<input type="radio" name="comment" id="dhwlq11" value="집품 대상과 무관한 상품 집품/" onclick="copyValue(this)"/><label for="dhwlq11" class="comment comment5 dhwlq11">집품 대상과 무관한 상품 집품/</label>
+<input type="radio" name="comment" id="dhwlq12" value="오집상품 원복/불용 로케이션 미사용" onclick="copyValue(this)"/><label for="dhwlq12" class="comment comment3 dhwlq12">오집상품 원복/불용 로케이션 미사용</label>
+<input type="radio" name="comment" id="dhwlq22" value="XY 원복/" onclick="copyValue(this)"/><label for="dhwlq22" class="comment comment3 dhwlq22">XY 원복/XY 인벤토리 ID</label>
+<input type="radio" name="comment" id="dhwlq21" value="유사 상품 교차집품/" onclick="copyValue(this)"/><label for="dhwlq21" class="comment comment5 dhwlq21">유사 상품 교차집품/</label>
+<input type="radio" name="comment" id="dhwlq32" value="PRB 원복/" onclick="copyValue(this)"/><label for="dhwlq32" class="comment comment3 dhwlq32">PRB 원복/PRB 인벤토리 ID</label>
+<input type="radio" name="comment" id="dhwlq42" value="가용화 인계/불용 로케이션 미사용" onclick="copyValue(this)"/><label for="dhwlq42" class="comment comment3 dhwlq42">가용화 인계/불용 로케이션 미사용</label>
+</div>
+
+<br/>
+
+<div class="category vkths">상품파손</div>
+<div class="vkthsC">
+<input type="radio" name="comment" id="vkths0" value="AGV/" onclick="copyValue(this)"/><label for="vkths0" class="cmd0 vkths0">층/</label>
+<input type="radio" name="comment" id="vkths11" value="작업자 패키징 훼손/XX 이동/" onclick="copyValue(this)"/><label for="vkths11" class="comment comment1 vkths11">작업자 패키징 훼손/XX 이동/XX 인벤토리 ID</label>
+<input type="radio" name="comment" id="vkths21" value="상품 불량/XX 이동/" onclick="copyValue(this)"/><label for="vkths21" class="comment comment1 vkths21">상품 불량/XX 이동/XX 인벤토리 ID</label>
+<input type="radio" name="comment" id="vkths31" value="작업자 낙하/XX 이동/" onclick="copyValue(this)"/><label for="vkths31" class="comment comment1 vkths31">작업자 낙하/XX 이동/XX 인벤토리 ID</label>
+<input type="radio" name="comment" id="vkths41" value="컨베이어/XX 이동/" onclick="copyValue(this)"/><label for="vkths41" class="comment comment1 vkths41">컨베이어/XX 이동/XX 인벤토리 ID</label>
+</div>
+
+<br/>
+
+<div class="category alrjawmd">미검증출고</div>
+<div class="alrjawmdC">
+<input type="radio" name="comment" id="alrjawmd0" value="AGV/" onclick="copyValue(this)"/><label for="alrjawmd0" class="cmd0 alrjawmd0">층/</label>
+<input type="radio" name="comment" id="alrjawmd11" value="누적검증/XY 전환/" onclick="copyValue(this)"/><label for="alrjawmd11" class="comment comment1 alrjawmd11">누적검증/XY 전환/XY 인벤토리 ID</label>
+<input type="radio" name="comment" id="alrjawmd21" value="운송장 검증 누락/재검증 후 출고/불용 로케이션 미사용" onclick="copyValue(this)"/><label for="alrjawmd21" class="comment comment1 alrjawmd21">운송장 검증 누락/재검증 후 출고/불용 로케이션 미사용</label>
+</div>
+
+<br/>
+
+<div class="category cnlth">출고취소</div>
+<div class="cnlthC">
+<input type="radio" name="comment" id="cnlth0" value="AGV/" onclick="copyValue(this)"/><label for="cnlth0" class="cmd0 cnlth0">층/</label>
+<input type="radio" name="comment" id="cnlth11" value="수량 오류/OUT → XY 전환/" onclick="copyValue(this)"/><label for="cnlth11" class="comment comment1 cnlth11">수량 오류/OUT → XY 전환/XY 인벤토리 ID</label>
+<input type="radio" name="comment" id="cnlth21" value="상품 분실/OUT → XY 전환/" onclick="copyValue(this)"/><label for="cnlth21" class="comment comment1 cnlth21">상품 분실/OUT → XY 전환/XY 인벤토리 ID</label>
+</div>
+
+</div>
+
+</body>
+
+<script>
+	function copyValue(element) {
+		const value = element.value;
+		navigator.clipboard.writeText(value).then(() => {
+        }).catch(err => {
+			console.error("복사 실패:", err);
+		});
+	}
+</script>
+
+</html>
